@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- iOS风格深色主题 -->
-    <style name="Theme.PaymentMonitor" parent="android:Theme.Material.DayNight.NoActionBar">
+    <style name="Theme.PaymentMonitor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- 主色调 - iOS蓝（深色模式稍微亮一些） -->
         <item name="android:colorPrimary">@color/ios_blue_light</item>
         <item name="android:colorPrimaryDark">@color/ios_blue</item>
