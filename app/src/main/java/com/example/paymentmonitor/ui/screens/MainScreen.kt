@@ -76,7 +76,7 @@ fun MainScreen(
             Row {
                 FilterChip(
                     onClick = { viewModel.setFilter(PaymentFilter.ALL) },
-                    label = { Text("全部") },
+                    label = { Text(stringResource(R.string.filter_all)) },
                     selected = uiState.selectedFilter == PaymentFilter.ALL
                 )
                 
@@ -103,7 +103,7 @@ fun MainScreen(
             ) {
                 Icon(
                     imageVector = Icons.Default.Refresh,
-                    contentDescription = "刷新"
+                    contentDescription = stringResource(R.string.refresh)
                 )
             }
         }

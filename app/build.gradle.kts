@@ -84,8 +84,6 @@ dependencies {
     // Date and time
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
     
-    // Permission handling
-    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
     
     // Testing
     testImplementation("junit:junit:4.13.2")

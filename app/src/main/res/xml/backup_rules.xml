@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+    Set of rules defining which files are backed up.
+    See https://developer.android.com/guide/topics/data/autobackup
+    for more details.
+    -->
+    <exclude domain="sharedpref" path="temp_prefs.xml"/>
+    <exclude domain="database" path="temp.db"/>
+</full-backup-content>
