@@ -39,8 +39,8 @@ fun PaymentRecordCard(
     }
     
     val sourceIcon = when (paymentRecord.source) {
-        PaymentSource.ALIPAY -> Icons.Default.AccountBalanceWallet
-        PaymentSource.WECHAT -> Icons.Default.CreditCard
+        PaymentSource.ALIPAY -> Icons.Filled.AccountBalanceWallet
+        PaymentSource.WECHAT -> Icons.Filled.CreditCard
     }
     
     val sourceText = when (paymentRecord.source) {

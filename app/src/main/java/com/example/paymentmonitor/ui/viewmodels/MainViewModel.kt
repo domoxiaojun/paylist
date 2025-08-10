@@ -43,13 +43,7 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true)
             
-            // 组合多个数据流
-            combine(
-                paymentRepository.getAllPaymentRecords(),
-                // 这里可以添加更多的数据流
-            ) { allRecords ->
-                allRecords
-            }.collect { records ->
+            paymentRepository.getAllPaymentRecords().collect { records ->
                 updateUiState(records)
             }
         }

@@ -5,6 +5,7 @@ import androidx.room.PrimaryKey
 import kotlinx.datetime.Instant
 import kotlinx.parcelize.Parcelize
 import android.os.Parcelable
+import kotlinx.parcelize.RawValue
 
 @Entity(tableName = "payment_records")
 @Parcelize
@@ -13,6 +14,7 @@ data class PaymentRecord(
     val id: Long = 0,
     val amount: Double,
     val source: PaymentSource,
+    @RawValue
     val timestamp: Instant,
     val title: String,
     val description: String,
