@@ -1,0 +1,91 @@
+name: Build and Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: '版本号 (例如: v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+        
+    - name: Cache Gradle packages
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+          
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+      
+    - name: Build Release APK (Unsigned)
+      run: ./gradlew assembleRelease
+      
+    - name: Get version name
+      id: get_version
+      run: |
+        if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+        else
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Rename APK
+      run: |
+        mkdir -p release-artifacts
+        cp app/build/outputs/apk/release/app-release-unsigned.apk release-artifacts/PaymentMonitor-${{ steps.get_version.outputs.VERSION }}.apk
+        
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.get_version.outputs.VERSION }}
+        name: Payment Monitor ${{ steps.get_version.outputs.VERSION }}
+        body: |
+          ## 收款监听器 ${{ steps.get_version.outputs.VERSION }}
+          
+          ### 功能特性
+          - 📱 监听支付宝和微信收款通知
+          - 💰 实时记录收款信息
+          - 📊 现代化Material Design 3界面
+          - 🔄 收款记录滚动显示
+          - 🚀 点击跳转到对应应用
+          - ⚡ 后台常驻服务
+          
+          ### 安装说明
+          1. 下载APK文件并安装
+          2. 授予应用通知访问权限
+          3. 允许应用在后台运行
+          4. 开始监听收款通知
+          
+          ### 注意事项
+          - 需要Android 8.0 (API 26) 以上版本
+          - 首次使用需要手动授予通知访问权限
+          - 建议将应用加入电池优化白名单
+        files: release-artifacts/PaymentMonitor-${{ steps.get_version.outputs.VERSION }}.apk
+        draft: false
+        prerelease: false

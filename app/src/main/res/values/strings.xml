@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">收款监听器</string>
+    <string name="permission_notification_access_title">需要通知访问权限</string>
+    <string name="permission_notification_access_message">为了监听支付宝和微信的收款通知，请授予应用通知访问权限。</string>
+    <string name="permission_notification_access_button">去设置</string>
+    <string name="permission_denied">权限被拒绝</string>
+    <string name="foreground_service_title">收款监听服务</string>
+    <string name="foreground_service_message">正在监听支付宝和微信收款通知</string>
+    <string name="no_records">暂无收款记录</string>
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="this_week">本周</string>
+    <string name="this_month">本月</string>
+    <string name="total_amount">总金额</string>
+    <string name="payment_source_alipay">支付宝</string>
+    <string name="payment_source_wechat">微信</string>
+    <string name="currency_symbol">¥</string>
+</resources>

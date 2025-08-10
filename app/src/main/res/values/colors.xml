@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 Light Theme Colors -->
+    <color name="md_theme_primary">#00696B</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#6FF6FB</color>
+    <color name="md_theme_onPrimaryContainer">#002021</color>
+    <color name="md_theme_secondary">#4A6363</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#CCE8E7</color>
+    <color name="md_theme_onSecondaryContainer">#051F20</color>
+    <color name="md_theme_tertiary">#4D5F7D</color>
+    <color name="md_theme_onTertiary">#FFFFFF</color>
+    <color name="md_theme_tertiaryContainer">#D4E3FF</color>
+    <color name="md_theme_onTertiaryContainer">#081C36</color>
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_errorContainer">#FFDAD6</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_onErrorContainer">#410002</color>
+    <color name="md_theme_background">#FAFDFC</color>
+    <color name="md_theme_onBackground">#191C1C</color>
+    <color name="md_theme_surface">#FAFDFC</color>
+    <color name="md_theme_onSurface">#191C1C</color>
+    <color name="md_theme_surfaceVariant">#DAE5E4</color>
+    <color name="md_theme_onSurfaceVariant">#3F4948</color>
+    <color name="md_theme_outline">#6F7979</color>
+    <color name="md_theme_outlineVariant">#BEC9C8</color>
+    <color name="md_theme_inverseSurface">#2E3131</color>
+    <color name="md_theme_inverseOnSurface">#EFF1F1</color>
+    <color name="md_theme_inversePrimary">#4DDADE</color>
+    
+    <!-- Payment Source Colors -->
+    <color name="alipay_blue">#1677FF</color>
+    <color name="wechat_green">#07C160</color>
+</resources>
