@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Material Design 3 Light Theme Colors -->
-    <color name="md_theme_primary">#00696B</color>
-    <color name="md_theme_onPrimary">#FFFFFF</color>
-    <color name="md_theme_primaryContainer">#6FF6FB</color>
-    <color name="md_theme_onPrimaryContainer">#002021</color>
-    <color name="md_theme_secondary">#4A6363</color>
-    <color name="md_theme_onSecondary">#FFFFFF</color>
-    <color name="md_theme_secondaryContainer">#CCE8E7</color>
-    <color name="md_theme_onSecondaryContainer">#051F20</color>
-    <color name="md_theme_tertiary">#4D5F7D</color>
-    <color name="md_theme_onTertiary">#FFFFFF</color>
-    <color name="md_theme_tertiaryContainer">#D4E3FF</color>
-    <color name="md_theme_onTertiaryContainer">#081C36</color>
-    <color name="md_theme_error">#BA1A1A</color>
-    <color name="md_theme_errorContainer">#FFDAD6</color>
-    <color name="md_theme_onError">#FFFFFF</color>
-    <color name="md_theme_onErrorContainer">#410002</color>
-    <color name="md_theme_background">#FAFDFC</color>
-    <color name="md_theme_onBackground">#191C1C</color>
-    <color name="md_theme_surface">#FAFDFC</color>
-    <color name="md_theme_onSurface">#191C1C</color>
-    <color name="md_theme_surfaceVariant">#DAE5E4</color>
-    <color name="md_theme_onSurfaceVariant">#3F4948</color>
-    <color name="md_theme_outline">#6F7979</color>
-    <color name="md_theme_outlineVariant">#BEC9C8</color>
-    <color name="md_theme_inverseSurface">#2E3131</color>
-    <color name="md_theme_inverseOnSurface">#EFF1F1</color>
-    <color name="md_theme_inversePrimary">#4DDADE</color>
+    <!-- iOS风格主色系 -->
+    <color name="ios_blue">#007AFF</color>
+    <color name="ios_blue_dark">#0056CC</color>
+    <color name="ios_blue_light">#4FA7FF</color>
     
-    <!-- Payment Source Colors -->
+    <!-- iOS风格次要颜色 -->
+    <color name="ios_green">#34C759</color>
+    <color name="ios_green_dark">#28A745</color>
+    <color name="ios_green_light">#5DD87A</color>
+    
+    <!-- iOS风格错误颜色 -->
+    <color name="ios_red">#FF3B30</color>
+    <color name="ios_red_light">#FF6B62</color>
+    
+    <!-- iOS风格橙色（警告） -->
+    <color name="ios_orange">#FF9500</color>
+    <color name="ios_orange_light">#FFB143</color>
+    
+    <!-- iOS风格背景色 -->
+    <color name="ios_background">#F2F2F7</color>
+    <color name="ios_dark_background">#000000</color>
+    <color name="ios_dark_surface">#1C1C1E</color>
+    
+    <!-- iOS风格文字颜色 -->
+    <color name="ios_text_primary">#000000</color>
+    <color name="ios_text_secondary">#8E8E93</color>
+    <color name="ios_text_tertiary">#C7C7CC</color>
+    
+    <!-- iOS风格深色文字颜色 -->
+    <color name="ios_text_primary_dark">#FFFFFF</color>
+    <color name="ios_text_secondary_dark">#8E8E93</color>
+    <color name="ios_text_tertiary_dark">#48484A</color>
+    
+    <!-- iOS风格分隔线 -->
+    <color name="ios_separator">#C6C6C8</color>
+    <color name="ios_separator_dark">#38383A</color>
+    
+    <!-- 支付来源颜色（保持原有） -->
     <color name="alipay_blue">#1677FF</color>
     <color name="wechat_green">#07C160</color>
+    
+    <!-- 兼容颜色（向后兼容） -->
+    <color name="AlipayBlue">@color/alipay_blue</color>
+    <color name="WeChatGreen">@color/wechat_green</color>
 </resources>

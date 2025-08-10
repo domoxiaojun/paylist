@@ -2,35 +2,43 @@ package com.example.paymentmonitor.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Material Design 3 Light Theme Colors
-val md_theme_primary = Color(0xFF00696B)
-val md_theme_onPrimary = Color(0xFFFFFFFF)
-val md_theme_primaryContainer = Color(0xFF6FF6FB)
-val md_theme_onPrimaryContainer = Color(0xFF002021)
-val md_theme_secondary = Color(0xFF4A6363)
-val md_theme_onSecondary = Color(0xFFFFFFFF)
-val md_theme_secondaryContainer = Color(0xFFCCE8E7)
-val md_theme_onSecondaryContainer = Color(0xFF051F20)
-val md_theme_tertiary = Color(0xFF4D5F7D)
-val md_theme_onTertiary = Color(0xFFFFFFFF)
-val md_theme_tertiaryContainer = Color(0xFFD4E3FF)
-val md_theme_onTertiaryContainer = Color(0xFF081C36)
-val md_theme_error = Color(0xFFBA1A1A)
-val md_theme_errorContainer = Color(0xFFFFDAD6)
-val md_theme_onError = Color(0xFFFFFFFF)
-val md_theme_onErrorContainer = Color(0xFF410002)
-val md_theme_background = Color(0xFFFAFDFC)
-val md_theme_onBackground = Color(0xFF191C1C)
-val md_theme_surface = Color(0xFFFAFDFC)
-val md_theme_onSurface = Color(0xFF191C1C)
-val md_theme_surfaceVariant = Color(0xFFDAE5E4)
-val md_theme_onSurfaceVariant = Color(0xFF3F4948)
-val md_theme_outline = Color(0xFF6F7979)
-val md_theme_outlineVariant = Color(0xFFBEC9C8)
-val md_theme_inverseSurface = Color(0xFF2E3131)
-val md_theme_inverseOnSurface = Color(0xFFEFF1F1)
-val md_theme_inversePrimary = Color(0xFF4DDADE)
+// iOS风格主色系
+val iOSBlue = Color(0xFF007AFF)
+val iOSBlueDark = Color(0xFF0056CC)
+val iOSBlueLight = Color(0xFF4FA7FF)
 
-// Payment Source Colors
+// iOS风格次要颜色
+val iOSGreen = Color(0xFF34C759)
+val iOSGreenDark = Color(0xFF28A745)
+val iOSGreenLight = Color(0xFF5DD87A)
+
+// iOS风格错误颜色
+val iOSRed = Color(0xFFFF3B30)
+val iOSRedLight = Color(0xFFFF6B62)
+
+// iOS风格警告颜色
+val iOSOrange = Color(0xFFFF9500)
+val iOSOrangeLight = Color(0xFFFFB143)
+
+// iOS风格背景色
+val iOSBackground = Color(0xFFF2F2F7)
+val iOSDarkBackground = Color(0xFF000000)
+val iOSDarkSurface = Color(0xFF1C1C1E)
+
+// iOS风格文字颜色
+val iOSTextPrimary = Color(0xFF000000)
+val iOSTextSecondary = Color(0xFF8E8E93)
+val iOSTextTertiary = Color(0xFFC7C7CC)
+
+// iOS风格深色文字颜色
+val iOSTextPrimaryDark = Color(0xFFFFFFFF)
+val iOSTextSecondaryDark = Color(0xFF8E8E93)
+val iOSTextTertiaryDark = Color(0xFF48484A)
+
+// iOS风格分隔线
+val iOSSeparator = Color(0xFFC6C6C8)
+val iOSSeparatorDark = Color(0xFF38383A)
+
+// 支付来源颜色（保持原有）
 val AlipayBlue = Color(0xFF1677FF)
 val WeChatGreen = Color(0xFF07C160)
