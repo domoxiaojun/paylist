@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Dark theme application theme. -->
     <style name="Theme.PaymentMonitor" parent="Theme.Material3.DayNight">
         <!-- Primary colors -->
-        <item name="colorPrimary">@color/md_theme_primary</item>
-        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+        <item name="colorPrimary">@color/md_theme_inversePrimary</item>
+        <item name="colorOnPrimary">@color/md_theme_primary</item>
         
         <!-- Secondary colors -->
         <item name="colorSecondary">@color/md_theme_secondary</item>
@@ -15,9 +15,9 @@
         <item name="colorOnError">@color/md_theme_onError</item>
         
         <!-- Surface colors -->
-        <item name="android:colorBackground">@color/md_theme_background</item>
-        <item name="colorOnBackground">@color/md_theme_onBackground</item>
-        <item name="colorSurface">@color/md_theme_surface</item>
-        <item name="colorOnSurface">@color/md_theme_onSurface</item>
+        <item name="android:colorBackground">@color/md_theme_inverseSurface</item>
+        <item name="colorOnBackground">@color/md_theme_inverseOnSurface</item>
+        <item name="colorSurface">@color/md_theme_inverseSurface</item>
+        <item name="colorOnSurface">@color/md_theme_inverseOnSurface</item>
     </style>
 </resources>
