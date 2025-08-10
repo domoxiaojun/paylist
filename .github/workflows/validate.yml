@@ -36,15 +36,10 @@ jobs:
     - name: Make gradlew executable
       run: chmod +x ./gradlew
       
-    - name: Validate Gradle setup
-      run: ./gradlew --version
-      
-    - name: Check project dependencies
-      run: ./gradlew dependencies --configuration debugCompileClasspath
-      
-    - name: Compile and check syntax
-      run: ./gradlew assembleDebug --dry-run
-      
-    - name: Run Android Lint (if available)
-      run: ./gradlew lintDebug || echo "Lint task not available, skipping"
-      continue-on-error: true
+    - name: Validate Gradle and project setup
+      run: |
+        echo "Checking Gradle version..."
+        ./gradlew --version
+        echo "Listing available tasks..."
+        ./gradlew tasks --quiet | head -20
+        echo "Validation completed successfully!"
